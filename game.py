@@ -137,3 +137,65 @@ if weapon_Prompt == 2:
             if health <= 0:
                 print("You lost -_-")
                 exit()
+
+
+if weapon_Prompt == 3:
+    print("Your first choice is a dagger! It has 5 attack damage and your first enemy has 10 health!\n")
+    attack_Prompt = int(input("Which attack do you want to use? \n\t1) Attack \n\t2) Block\n"))
+    
+    if attack_Prompt == 1:
+        enemy1hp -= greatsword
+        if enemy1hp <= 0:
+            print("You have slain the first boss!")
+        else:
+            health -= 20
+            print("You didn't kill him! Your health is now", health)
+            while enemy1hp > 0:
+                try_Again1 = int(input("Would you like to attack again? \n\t1) Yes \n\t2) No\n"))
+                if try_Again1 == 1:
+                    enemy1hp -= greatsword
+                    if enemy1hp <= 0:
+                        print("You have slain the first boss!")
+                        break
+                    health -= 20
+                    print("Still alive! Your health is now", health)
+                    if health <= 0:
+                        print("Wow you really lost -_-")
+                        exit()
+                else:
+                    print("You suck")
+                    exit()
+    else:
+        print("Don't block again")
+        exit()
+
+    # POWER-UP SECTION (AFTER FIRST BOSS)
+    power_Up1 = int(input("Choose your powerup: \n\t1) Random Attack Damage \n\t2) Super Block for 1 Turn \n\t3) Heal for 20 health\n"))
+
+    if power_Up1 == 3:
+        health += 20
+        print("You healed! Health is now", health)
+
+    print("Your new enemy appears!")
+
+    while enemy2hp > 0:
+        power_Input = int(input("What do you want to do? \n\t1) Use Random Attack \n\t2) Attack \n\t3) Block\n"))
+        if power_Input == 1:
+            enemy2hp -= randomAtk
+            print(f"You did {randomAtk} damage!")
+        elif power_Input == 2:
+            enemy2hp -= greatsword
+            print("You did 5 damage.")
+        else:
+            print("Don't block buddy")
+            exit()
+
+        if enemy2hp <= 0:
+            print("You have beaten the final boss!")
+            break
+        else:
+            health -= 40
+            print(f"Enemy attacks! Your health is now {health}")
+            if health <= 0:
+                print("You lost -_-")
+                exit()
