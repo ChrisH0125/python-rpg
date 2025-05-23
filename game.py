@@ -123,7 +123,7 @@ if weapon_Prompt == 2:
             print(f"You did {randomAtk} damage!")
         elif power_Input == 2:
             enemy2hp -= sword
-            print("You did 5 damage.")
+            print("You did 10 damage.")
         else:
             print("Don't block buddy")
             exit()
@@ -140,7 +140,7 @@ if weapon_Prompt == 2:
 
 
 if weapon_Prompt == 3:
-    print("Your first choice is a dagger! It has 5 attack damage and your first enemy has 10 health!\n")
+    print("Your first choice is a greatsword! It has 15 attack damage and your first enemy has 10 health!\n")
     attack_Prompt = int(input("Which attack do you want to use? \n\t1) Attack \n\t2) Block\n"))
     
     if attack_Prompt == 1:
@@ -185,7 +185,7 @@ if weapon_Prompt == 3:
             print(f"You did {randomAtk} damage!")
         elif power_Input == 2:
             enemy2hp -= greatsword
-            print("You did 5 damage.")
+            print("You did 15 damage.")
         else:
             print("Don't block buddy")
             exit()
