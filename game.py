@@ -14,4 +14,4 @@ greatsword = 0
 print("Hello! Welcome to my first python project, it's basically a little RPG game where you have 5 enemies to defeat, have fun!!!\n")
 
 name = input("So, let's get started! What is your name?: ")
-print("Welcome," + name + "What ")
+weapon_Prompt = int(input(("Welcome," + name + "!\n What do you want your weapon to be? \n\t1) Dagger \n\t2) Sword \n\t3) Greatsword")))
