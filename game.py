@@ -6,11 +6,8 @@ attack = 1
 enemy1hp = 10
 enemy2hp = 20
 enemy3hp = 50
-enemy4hp = 70
-enemy5hp = 100
 randomAtk = random.randInt(5,30)
 superBlock = 30
-heal = health+=20
 sword = 10
 dagger = 5
 greatsword = 15
